@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 247 247" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>661E0ECB-F192-4678-8AEF-016420CC35DB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <style>
+        .line.animated{
+            opacity: 1;
+            stroke-dasharray: 640;
+            stroke-dashoffset: 0;
+            -webkit-animation: dash 1s linear forwards;
+            -o-animation: dash 1s linear forwards;
+            -moz-animation: dash 1s linear forwards;
+            animation: dash 1s linear forwards;
+        }
+
+        .line{
+            opacity: 0
+        }
+
+        @-webkit-keyframes dash{
+            from{
+                stroke-dashoffset: 640;
+            }
+            to{
+                stroke-dashoffset: 0;
+            }
+        }
+        svg{
+            padding: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IS_IOT_Page" transform="translate(-98.000000, -1929.000000)" stroke-width="2">
+            <g id="monitor-operations" transform="translate(98.000000, 1930.000000)">
+                <path class="line additional" d="M206.333333,116.827778 L206.333333,39.05 L167.444444,39.05 L167.444444,139.05 M128.555556,133.494444 L128.555556,0.161111111 L167.444444,0.161111111 L167.444444,39.05 M128.555556,77.9388889 L89.6666667,77.9388889 L89.6666667,127.938889" id="Stroke-32" stroke="#1476F2"></path>
+                <path class="line" d="M84.1111111,205.716667 C86.2388889,203.588889 88.4222222,200.161111 95.2222222,200.161111 C102.022222,200.161111 166.2,200.161111 173,200.161111 C179.172222,200.161111 213.127778,166.111111 217.444444,161.272222 C221.594444,156.616667 240.094444,128.822222 245.222222,116.827778 C242,112.488889 233.294444,108.877778 223,111.272222 C213.177778,113.55 207.4,120.611111 200.777778,133.494444 L175.311111,146.716667 M117.444444,166.827778 C117.444444,166.827778 156.333333,166.827778 161.888889,166.827778 C184.111111,166.827778 184.111111,139.05 161.888889,139.05 C156.333333,139.05 147.983333,139.05 132.533333,139.05 C127.905556,139.05 119.227778,127.938889 111.888889,127.938889 C108.627778,127.938889 91.6166667,127.938889 84.1111111,127.938889 C76.6055556,127.938889 67.2777778,134.033333 61.8888889,139.05 C53.5611111,147.377778 39.6666667,161.272222 39.6666667,161.272222 M67.4444444,244.605556 L95.2222222,216.827778 L28.5555556,150.161111 L0.777777778,177.938889 M28.5555556,177.938889 L39.6666667,189.05" id="blue-line" stroke="#505050" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+    <script type="text/javascript">
+        document.animate = function(){
+            var isAnimated = false;
+
+            var animatedElement = document.getElementById("blue-line");
+            animatedElement.setAttribute("class", "line animated");
+            animatedElement.addEventListener("animationstart", function(){
+                isAnimated = true;
+            });
+            if (animatedElement.addEventListener){
+                animatedElement.addEventListener("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }else if (animatedElement.attachEvent){
+                animatedElement.attachEvent("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }
+
+            setTimeout(function(){
+                if(!isAnimated){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                }
+            },1000)
+
+        }
+    </script>
+</svg>

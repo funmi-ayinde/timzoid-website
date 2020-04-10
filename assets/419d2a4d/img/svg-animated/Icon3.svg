@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 252 181" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>Icon3</title>
+    <desc>Created with Sketch.</desc>
+    <style>
+        .line.animated{
+            opacity: 1;
+            stroke-dasharray: 700;
+            stroke-dashoffset: 0;
+            -webkit-animation: dash 1s linear forwards;
+            -o-animation: dash 1s linear forwards;
+            -moz-animation: dash 1s linear forwards;
+            animation: dash 1s linear forwards;
+        }
+
+        .line{
+            opacity: 0
+        }
+
+        @-webkit-keyframes dash{
+            from{
+                stroke-dashoffset: 640;
+            }
+            to{
+                stroke-dashoffset: 0;
+            }
+        }
+        svg{
+            padding: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon3" transform="translate(1.000000, 1.000000)">
+            <path class="line additional" d="M103.26087,103.26087 L103.26087,168.478261 C103.26087,174.478261 98.3913043,179.347826 92.3913043,179.347826 L10.8695652,179.347826 C4.86956522,179.347826 0,174.478261 0,168.478261 L0,10.8695652 C0,4.86956522 4.86956522,0 10.8695652,0 L92.3913043,0 C98.3913043,0 103.26087,4.86956522 103.26087,10.8695652 L103.26087,70.6521739" id="Stroke-1" stroke="#1476F2"></path>
+            <path class="line additional" d="M130.434783,103.26087 L130.434783,135.869565 C130.434783,141.869565 135.304348,146.73913 141.304348,146.73913 L217.391304,146.73913 C223.391304,146.73913 228.26087,141.869565 228.26087,135.869565 L228.26087,43.4782609 C228.26087,37.4782609 223.391304,32.6086957 217.391304,32.6086957 L141.304348,32.6086957 C135.304348,32.6086957 130.434783,37.4782609 130.434783,43.4782609 L130.434783,70.6521739" id="Stroke-3" stroke="#505050"></path>
+            <polyline class="line additional" id="Stroke-5" stroke="#505050" points="146.73913 146.73913 146.73913 179.347826 211.956522 179.347826 211.956522 146.73913"></polyline>
+            <polyline class="line additional" id="Stroke-7" stroke="#505050" points="211.956522 32.6086957 211.956522 0 146.73913 0 146.73913 32.6086957"></polyline>
+            <line class="line additional" x1="0" y1="146.73913" x2="103.26087" y2="146.73913" id="Stroke-9" stroke="#1476F2"></line>
+            <line class="line additional" x1="103.26087" y1="27.173913" x2="0" y2="27.173913" id="Stroke-11" stroke="#1476F2"></line>
+            <line class="line additional" x1="43.4782609" y1="163.043478" x2="59.7826087" y2="163.043478" id="Stroke-13" stroke="#1476F2"></line>
+            <line class="line additional" x1="179.347826" y1="86.9565217" x2="48.9130435" y2="86.9565217" id="Stroke-15" stroke="#1476F2"></line>
+            <polyline class="line" id="blue-line" stroke="#1476F2" points="65.2173913 103.26087 48.9130435 86.9565217 65.2173913 70.6521739"></polyline>
+            <polyline class="line" stroke="#1476F2" points="163.043478 103.26087 179.347826 86.9565217 163.043478 70.6521739"></polyline>
+            <path class="line additional" d="M239.130435,70.6521739 L244.565217,70.6521739 C247.565217,70.6521739 250,73.0869565 250,76.0869565 L250,97.826087 C250,100.826087 247.565217,103.26087 244.565217,103.26087 L239.130435,103.26087" id="Stroke-21" stroke="#505050"></path>
+        </g>
+    </g>
+    <script type="text/javascript">
+        document.animate = function(){
+            var isAnimated = false;
+
+            var animatedElement = document.getElementById("blue-line");
+            animatedElement.setAttribute("class", "line animated");
+            animatedElement.addEventListener("animationstart", function(){
+                isAnimated = true;
+            });
+            if (animatedElement.addEventListener){
+                animatedElement.addEventListener("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }else if (animatedElement.attachEvent){
+                animatedElement.attachEvent("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }
+
+            setTimeout(function(){
+                if(!isAnimated){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                }
+            },1000)
+
+        }
+    </script>
+</svg>

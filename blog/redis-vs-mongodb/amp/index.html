@@ -1,0 +1,641 @@
+<!-- This page is cached by the Hummingbird Performance plugin v2.4.1 - https://wordpress.org/plugins/hummingbird-performance/. --><!doctype html>
+<html amp lang="en-US">
+
+<!-- Mirrored from www.intellectsoft.net/blog/redis-vs-mongodb/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Apr 2020 21:37:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.intellectsoft.net/blog/#website","url":"https://www.intellectsoft.net/blog/","name":"Intellectsoft Blog","potentialAction":{"@type":"SearchAction","target":"https://www.intellectsoft.net/blog/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.intellectsoft.net/blog/redis-vs-mongodb/#primaryimage","url":"https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-e1582907401939.jpeg","width":500,"height":334,"caption":"Redis vs MongoDB Cover"},{"@type":"WebPage","@id":"https://www.intellectsoft.net/blog/redis-vs-mongodb/#webpage","url":"https://www.intellectsoft.net/blog/redis-vs-mongodb/","inLanguage":"en-US","name":"Redis vs MongoDB: How to differ and what to choose?","isPartOf":{"@id":"https://www.intellectsoft.net/blog/#website"},"primaryImageOfPage":{"@id":"https://www.intellectsoft.net/blog/redis-vs-mongodb/#primaryimage"},"datePublished":"2020-02-03T08:00:30+00:00","dateModified":"2020-02-02T15:41:32+00:00","author":{"@id":"https://www.intellectsoft.net/blog/#/schema/person/66d37bc47fb3d02f1b274197aa32ddf6"},"description":"Redis vs MongoDB: Discussion clarified! Read to know the greatest differences between these databases and learn how to select the best that suits your needs."},{"@type":["Person"],"@id":"https://www.intellectsoft.net/blog/#/schema/person/66d37bc47fb3d02f1b274197aa32ddf6","name":"dmitriy.kirilyuk","image":{"@type":"ImageObject","@id":"https://www.intellectsoft.net/blog/#authorlogo","url":"https://secure.gravatar.com/avatar/fb68fa1452c17b5536f916bfb057e2af?s=96&d=mm&r=g","caption":"dmitriy.kirilyuk"},"sameAs":[]}]}</script>
+	<title>Redis vs MongoDB: How to differ and what to choose?</title>
+		<link rel="canonical" href="../index.html" />
+	<script type='text/javascript' src='https://cdn.ampproject.org/v0.js' async></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><meta name="generator" content="AMP Plugin v1.4.4; mode=reader; experiences=website"><meta name="generator" content="WordPress 5.3.2" />
+	<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ * Additionally, in side of \AMP_Img_Sanitizer::determine_dimensions() it could $amp_img->setAttribute( 'object-fit', 'contain' )
+ * so that the following rules wouldn't be needed.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+amp-anim.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+amp-carousel .amp-wp-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1rem;
+}
+
+.wp-block-gallery[data-amp-carousel="true"] {
+	display: block;
+	flex-wrap: unset;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 600px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( ../../wp-content/plugins/amp/assets/images/placeholder-icon.png) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style>
+</head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="../../index.html">
+										<amp-img src="../../wp-content/uploads/cropped-favicon-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img>
+						<span class="amp-site-title">
+				Intellectsoft Blog			</span>
+		</a>
+
+					</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">Redis vs MongoDB: How to differ and what to choose?</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/fb68fa1452c17b5536f916bfb057e2af?s=24&amp;d=mm&amp;r=g" alt="dmitriy.kirilyuk" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">dmitriy.kirilyuk</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-02-03T11:00:30+00:00">
+		2 months ago	</time>
+</div>
+	</header>
+
+	<figure class="amp-wp-article-featured-image wp-caption">
+	<amp-img width="1024" height="683" src="../../wp-content/uploads/Redis-vs-MongoDB-Cover-1024x683.jpg" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="Redis vs MongoDB Cover" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-1024x683.jpeg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-300x200.jpeg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-768x513.jpeg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-1536x1025.jpeg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-2048x1367.jpeg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-600x400.jpeg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-450x300.jpeg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-1000x667.jpeg 1000w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-e1582907401939.jpeg 500w" layout="intrinsic"><noscript><img width="1024" height="683" src="../../wp-content/uploads/Redis-vs-MongoDB-Cover-1024x683.jpg" class="attachment-large size-large wp-post-image" alt="Redis vs MongoDB Cover" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-1024x683.jpeg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-300x200.jpeg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-768x513.jpeg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-1536x1025.jpeg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-2048x1367.jpeg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-600x400.jpeg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-450x300.jpeg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-1000x667.jpeg 1000w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-e1582907401939.jpeg 500w" sizes="(max-width: 1024px) 100vw, 1024px"></noscript></amp-img>	</figure>
+
+	<div class="amp-wp-article-content">
+		<p>When it comes to practical software development questions, it’s hard to find the right answers in Google immediately. Usually, the most useful tips are hidden in the bits of information from Quora, forums, or unreadable articles.</p>
+<p>Actually, distinguishing between Redis and MongoDB is exactly the same case. But the problem is solved here. Read this overview to fill the informational vacuum on this topic!</p>
+<h2>Redis vs MongoDB: Introduction to the topic</h2>
+<p>For those who never heard these two words before, Redis and MongoDB are two NoSQL databases. Logically, being the two types under the same class, they have both structural similarities and differences. But what exactly they are?</p>
+<p>In terms of similarities, Redis and MongoDB are common in these areas:</p>
+<ul>
+<li>The release year: 2009</li>
+<li>The license type: Open Source</li>
+<li>Compatibility with several operating systems: Windows, Linux, and OS X</li>
+<li>Supporting several programming languages: C, C#, C++, Clojure, D, Dart, Erlang, Go, Haskell, Java, Javascript, Lisp, Lua, MatLab, Perl, PHP, Prolog, Python, R, Ruby, Scala, and Smalltalk</li>
+<li>Secondary indexes: Enabled status</li>
+<li>Replication: Master-slave</li>
+<li>Compatible with: ScaleGrid, CData</li>
+<li>Need the same amount of time to build sophisticated requests for data processing</li>
+</ul>
+<p>But of course, they are also different – in their original model, basically.</p>
+<p>Redis works within memory and serves as a compositional element of a software system. There, you can find it as a database, cache, or message broker. This simplest management system works with pairs of keys and values, making the process similar to working with a dictionary.</p>
+<p>In its turn, MongoDB is a document store. This format makes it autonomous enough to work as a cloud technology or a part of self-service infrastructure. It is not fixed by the single scheme requirement but uses internal notations.</p>
+<h2>So, what’s the basis of the dissimilarity between two databases?</h2>
+<p>Because of the different original model basis, there were times when Redis and MongoDB were simply incomparable. But recently, s search engine became a secondary database model for both Redis and MongoDB. And this modification (titled Percona Memory Engine) made it possible to compare Redis vs MongoDB as equals.</p>
+<p>Simply put, Redis is generally known by high performance, while MongoDB is more efficient in terms of API used. But of course, there are more details and practical applications to know for sure how to choose a database. Let’s check how they differ in terms of speed, performance, configuration, and other processing criteria.</p>
+<p><amp-img class="aligncenter size-medium wp-image-18297 amp-wp-enforced-sizes" src="../../wp-content/uploads/Redis-Framework-300x100.png" alt="Redis Framework Advantages" width="300" height="100" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-300x100.png 300w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-768x257.png 768w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-600x200.png 600w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-450x150.png 450w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-1000x334.png 1000w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework.png 1024w" layout="intrinsic"><noscript><img class="aligncenter size-medium wp-image-18297" src="../../wp-content/uploads/Redis-Framework-300x100.png" alt="Redis Framework Advantages" width="300" height="100" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-300x100.png 300w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-768x257.png 768w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-600x200.png 600w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-450x150.png 450w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework-1000x334.png 1000w, https://www.intellectsoft.net/blog/wp-content/uploads/Redis-Framework.png 1024w" sizes="(max-width: 300px) 100vw, 300px"></noscript></amp-img></p>
+<h2>Advantages of Redis</h2>
+<p>One the one hand, Redis framework is the in-memory database useful for cache, message brokering, and the development tasks that require outstanding performance.</p>
+<p>Here are the details:</p>
+<ol>
+<li>Redis is an excellent choice for caching. With it, you can build sophisticated data structures and get access to multiple options to store and query information.</li>
+<li>The installation process is simple, and the database is easy to maintain.</li>
+<li>The system is persistent. Even though the database copes with heavy loads of information, the clear key-value structure protects it from hassles.</li>
+<li>Redis framework is the top pick for “hot data,” or the information you need to process fast. In this case, it’s able to process up to 1GB at once.</li>
+<li>It has an effective message transport system that is easily replicated on various machines within one cluster.</li>
+</ol>
+<h2>Disadvantages of Redis</h2>
+<p>Of course, Redis also has some shortcomings you should be aware of. In fact, all of them are related to the in-memory structure of this database.</p>
+<p>Here are these structural elements Redis lacks:</p>
+<ol>
+<li>It doesn’t maintain encryption on the wire.</li>
+<li>Redis sticks to its principle of mandatory storage to all the data.</li>
+<li>There is no basis to divide roles and responsibilities within the database (frequently referred to as “role-based account control”).</li>
+<li>Since the information is stored is separate structural units that are connected in pairs, it’s hard to provide the deliberate clustering.</li>
+<li>It’s hard to connect Redis to massive cloud databases in big organizations. Also, if you want to scale it, you have no choice but to create several interlinked Redis databases.</li>
+<li>You can’t simply input data into Redis. This database requires your architectural skills to determine the saving and structuring of your information in advance.</li>
+</ol>
+<p><amp-img class="aligncenter size-medium wp-image-18298 amp-wp-enforced-sizes" src="../../wp-content/uploads/Advantages-of-MongoDB-Framework-300x81.png" alt="Advantages of MongoDB Framework" width="300" height="81" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-300x81.png 300w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-1024x276.png 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-768x207.png 768w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-600x162.png 600w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-450x121.png 450w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-1000x270.png 1000w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework.png 1280w" layout="intrinsic"><noscript><img class="aligncenter size-medium wp-image-18298" src="../../wp-content/uploads/Advantages-of-MongoDB-Framework-300x81.png" alt="Advantages of MongoDB Framework" width="300" height="81" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-300x81.png 300w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-1024x276.png 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-768x207.png 768w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-600x162.png 600w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-450x121.png 450w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework-1000x270.png 1000w, https://www.intellectsoft.net/blog/wp-content/uploads/Advantages-of-MongoDB-Framework.png 1280w" sizes="(max-width: 300px) 100vw, 300px"></noscript></amp-img></p>
+<p> </p>
+<h2>Advantages of MongoDB</h2>
+<p>On another hand, MongoDB framework is frequently stored on the disk, being referred to as Persona memory storage engine. To function, it creates JSON interface for information. Also, to empower the performance of MongoDB, search engines are frequently connected to this database.</p>
+<p>That’s the reason why MongoDB database has collected many advantages:</p>
+<ol>
+<li>MongoDB effectively solves the issue of cost and speed for choosing an appropriate solution. Precisely, it offers several assumptions you can choose from.</li>
+<li>It’s simple to understand and use, thanks to the user-friendly JSON format of representation.</li>
+<li>MongoDB is the best choice for scaling because you can distribute it on various platforms.</li>
+<li>All the basic functionality is in-built – including SSL, RBAC, and scale-out.</li>
+<li>It enables playing with many features – including aggregations and map-reduce.</li>
+<li>It saves your resources spent on extra learning and maintenance spending.</li>
+<li>It’s a great choice for managing customer analytics and product catalogs. Empowered by a docker container, the database is effective while dealing with information system projects.</li>
+</ol>
+<h2>Disadvantages of MongoDB</h2>
+<p>In fact, MongoDB framework has disadvantages when you try to use it for tasks that are more complicated than simple prototyping. Also, there are some other nuances:</p>
+<ol>
+<li>It’s ineffective for caching. To complete this development task, the very structure of MongoDB database is too chaotic. So, in any case of fast and straightforward processing, this framework has severe drawbacks.</li>
+<li>It lacks persistence. MongoDB database doesn’t have a sustainable basis for coping with replicas still.</li>
+<li>MongoDB can’t maintain elements for binding sustainably.</li>
+<li>While scaling, you may experience problems with moving analytical and rich searching data.</li>
+</ol>
+<h2>Redis vs MongoDB: Speed</h2>
+<p>In the competition of Redis vs MongoDB, the latter is known for its high speed. Because MongoDB is simpler in use and structure, it doesn’t require much and can be fast. On the contrary, the presence of fragmented elements in the internal structure of Redis forces it to take more time for processing.</p>
+<h2>Redis vs MongoDB: Performance</h2>
+<p>Both databases are compute-bound. However, Redis manages to perform the same quality on one core, while MongoDB uses multiple cores to succeed. In practice, your Redis database can fly as fast as your cache!</p>
+<p>Everything has its price, though – and Redis framework pays for its outstanding performance by using much more RAM for storage purposes.</p>
+<h2>Redis vs MongoDB: Configuration</h2>
+<p>Based on YCSB measurement tests, the comparison of Redis and MongoDB also revealed the better performance of Redis.</p>
+<h2>Conclusion: How to choose between Redis and MongoDB?</h2>
+<p>And as a final titbit, here are the most useful insights from user experience for you to choose between Redis and MongoDB:</p>
+<ol>
+<li>Revise the level of your development team before making a choice. For the beginners, the simplicity of MongoDB turns it into the top pick. But if you need the full functionality of a database and can dedicate extra time to learn how to master it, go for Redis.</li>
+<li>Determine the deadline for the development task. Usually, Redis takes more time to create the internal structure of queries and customize their types. On the contrary, MongoDB uses one structure and enables finishing the development task faster.</li>
+<li>Measure the complexity of the development task. MongoDB is a classic database that is better for simple work and prototyping. Also, it’s useful for Junior software developers or the teams that work in startups or during Hackathons. In its turn, Redis is more innovative, complex, and flexible. It needs more time to master – but in return, you gain a deeper knowledge and the wider horizon of development opportunities in return.</li>
+<li>Check how much you know about the project. If you don’t know everything, go for MongoDB. This database uses prescribed schema (through the app), so you don’t need to input everything manually. But if you choose Redis, be ready to explicitly define how you want to store information to use this database comfortably.</li>
+</ol>
+<p>In sum, many developers go for MongoDB, thanks to its speed, effectiveness, and elegance. After the introduction of Percona Memory Engine (which improved the performance characteristics of this database), their number even increased. At the same time, the novelty and flexibility of Redis makes a preferable choice for pro developers.</p>
+<p>At the same time, you should always keep in mind that Redis and MongoDB are different as a bicycle and a car. In reality, the speed you want, the number of resources available, and the distance you need to complete are the real factors for selecting between these frameworks.</p>
+<p>In the end, both Redis and MongoDB are good at coping with the task of data storage and maintenance.</p>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="../../software-development/index.html" rel="category tag">Development</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="../index.html#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>Intellectsoft Blog</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+
+<!-- This site is optimized with Phil Singleton's WP SEO Structured Data pro plugin v1.3.10 - https://kcseopro.com/wordpress-seo-structured-data-schema-plugin/ -->
+<script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Redis vs MongoDB: How to differ and what to choose?",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.intellectsoft.net/blog/redis-vs-mongodb/"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Intellectsoft Team"
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.intellectsoft.net/blog/wp-content/uploads/Redis-vs-MongoDB-Cover-e1582907401939.jpeg",
+        "height": 334,
+        "width": 500
+    },
+    "datePublished": "February 3, 2020 11:00 am",
+    "dateModified": "February 2, 2020 6:40 pm",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Intellectsoft Team",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.intellectsoft.net/blog/wp-content/uploads/intellectsoft_logo-1.png",
+            "height": 60,
+            "width": 213
+        }
+    },
+    "description": "Redis vs MongoDB: Discussion clarified! Read to know the greatest differences between these databases and learn how to select the best that suits your needs.",
+    "articleBody": "When it comes to practical software development questions, it\u2019s hard to find the right answers in Google immediately. Usually, the most useful tips are hidden in the bits of information from Quora, forums, or unreadable articles.\r\n\r\nActually, distinguishing between Redis and MongoDB is exactly the same case. But the problem is solved here. Read this overview to fill the informational vacuum on this topic!\r\nRedis vs MongoDB: Introduction to the topic\r\nFor those who never heard these two words before, Redis and MongoDB are two NoSQL databases. Logically, being the two types under the same class, they have both structural similarities and differences. But what exactly they are?\r\n\r\nIn terms of similarities, Redis and MongoDB are common in these areas:\r\n\r\n \tThe release year: 2009\r\n \tThe license type: Open Source\r\n \tCompatibility with several operating systems: Windows, Linux, and OS X\r\n \tSupporting several programming languages: C, C#, C++, Clojure, D, Dart, Erlang, Go, Haskell, Java, Javascript, Lisp, Lua, MatLab, Perl, PHP, Prolog, Python, R, Ruby, Scala, and Smalltalk\r\n \tSecondary indexes: Enabled status\r\n \tReplication: Master-slave\r\n \tCompatible with: ScaleGrid, CData\r\n \tNeed the same amount of time to build sophisticated requests for data processing\r\n\r\nBut of course, they are also different \u2013 in their original model, basically.\r\n\r\nRedis works within memory and serves as a compositional element of a software system. There, you can find it as a database, cache, or message broker. This simplest management system works with pairs of keys and values, making the process similar to working with a dictionary.\r\n\r\nIn its turn, MongoDB is a document store. This format makes it autonomous enough to work as a cloud technology or a part of self-service infrastructure. It is not fixed by the single scheme requirement but uses internal notations.\r\nSo, what\u2019s the basis of the dissimilarity between two databases?\r\nBecause of the different original model basis, there were times when Redis and MongoDB were simply incomparable. But recently, s search engine became a secondary database model for both Redis and MongoDB. And this modification (titled Percona Memory Engine) made it possible to compare Redis vs MongoDB as equals.\r\n\r\nSimply put, Redis is generally known by high performance, while MongoDB is more efficient in terms of API used. But of course, there are more details and practical applications to know for sure how to choose a database. Let\u2019s check how they differ in terms of speed, performance, configuration, and other processing criteria.\r\n\r\n\r\nAdvantages of Redis\r\nOne the one hand, Redis framework is the in-memory database useful for cache, message brokering, and the development tasks that require outstanding performance.\r\n\r\nHere are the details:\r\n\r\n \tRedis is an excellent choice for caching. With it, you can build sophisticated data structures and get access to multiple options to store and query information.\r\n \tThe installation process is simple, and the database is easy to maintain.\r\n \tThe system is persistent. Even though the database copes with heavy loads of information, the clear key-value structure protects it from hassles.\r\n \tRedis framework is the top pick for \u201chot data,\u201d or the information you need to process fast. In this case, it\u2019s able to process up to 1GB at once.\r\n \tIt has an effective message transport system that is easily replicated on various machines within one cluster.\r\n\r\nDisadvantages of Redis\r\nOf course, Redis also has some shortcomings you should be aware of. In fact, all of them are related to the in-memory structure of this database.\r\n\r\nHere are these structural elements Redis lacks:\r\n\r\n \tIt doesn\u2019t maintain encryption on the wire.\r\n \tRedis sticks to its principle of mandatory storage to all the data.\r\n \tThere is no basis to divide roles and responsibilities within the database (frequently referred to as \u201crole-based account control\u201d).\r\n \tSince the information is stored is separate structural units that are connected in pairs, it\u2019s hard to provide the deliberate clustering.\r\n \tIt\u2019s hard to connect Redis to massive cloud databases in big organizations. Also, if you want to scale it, you have no choice but to create several interlinked Redis databases.\r\n \tYou can\u2019t simply input data into Redis. This database requires your architectural skills to determine the saving and structuring of your information in advance.\r\n\r\n\r\n\r\n&amp;nbsp;\r\nAdvantages of MongoDB\r\nOn another hand, MongoDB framework is frequently stored on the disk, being referred to as Persona memory storage engine. To function, it creates JSON interface for information. Also, to empower the performance of MongoDB, search engines are frequently connected to this database.\r\nThat\u2019s the reason why MongoDB database has collected many advantages:\r\n\r\nMongoDB effectively solves the issue of cost and speed for choosing an appropriate solution. Precisely, it offers several assumptions you can choose from.\r\nIt\u2019s simple to understand and use, thanks to the user-friendly JSON format of representation.\r\nMongoDB is the best choice for scaling because you can distribute it on various platforms.\r\nAll the basic functionality is in-built \u2013 including SSL, RBAC, and scale-out.\r\nIt enables playing with many features \u2013 including aggregations and map-reduce.\r\nIt saves your resources spent on extra learning and maintenance spending.    \r\nIt\u2019s a great choice for managing customer analytics and product catalogs. Empowered by a docker container, the database is effective while dealing with information system projects.\r\n\t\r\n\r\nDisadvantages of MongoDB\r\nIn fact, MongoDB framework has disadvantages when you try to use it for tasks that are more complicated than simple prototyping. Also, there are some other nuances:  \r\n\r\nIt\u2019s ineffective for caching. To complete this development task, the very structure of MongoDB database is too chaotic. So, in any case of fast and straightforward processing, this framework has severe drawbacks.\r\nIt lacks persistence. MongoDB database doesn\u2019t have a sustainable basis for coping with replicas still.\r\nMongoDB can\u2019t maintain elements for binding sustainably.\r\nWhile scaling, you may experience problems with moving analytical and rich searching data.  \r\n\r\n\r\nRedis vs MongoDB: Speed \r\nIn the competition of Redis vs MongoDB, the latter is known for its high speed. Because MongoDB is simpler in use and structure, it doesn\u2019t require much and can be fast. On the contrary, the presence of fragmented elements in the internal structure of Redis forces it to take more time for processing.\r\nRedis vs MongoDB: Performance \r\nBoth databases are compute-bound. However, Redis manages to perform the same quality on one core, while MongoDB uses multiple cores to succeed. In practice, your Redis database can fly as fast as your cache!\r\nEverything has its price, though \u2013 and Redis framework pays for its outstanding performance by using much more RAM for storage purposes. \r\nRedis vs MongoDB: Configuration \r\nBased on YCSB measurement tests, the comparison of Redis and MongoDB also revealed the better performance of Redis. \r\nConclusion: How to choose between Redis and MongoDB?\r\nAnd as a final titbit, here are the most useful insights from user experience for you to choose between Redis and MongoDB: \r\n\r\nRevise the level of your development team before making a choice. For the beginners, the simplicity of MongoDB turns it into the top pick. But if you need the full functionality of a database and can dedicate extra time to learn how to master it, go for Redis.\r\nDetermine the deadline for the development task. Usually, Redis takes more time to create the internal structure of queries and customize their types. On the contrary, MongoDB uses one structure and enables finishing the development task faster.\r\nMeasure the complexity of the development task. MongoDB is a classic database that is better for simple work and prototyping. Also, it\u2019s useful for Junior software developers or the teams that work in startups or during Hackathons. In its turn, Redis is more innovative, complex, and flexible. It needs more time to master \u2013 but in return, you gain a deeper knowledge and the wider horizon of development opportunities in return.\r\nCheck how much you know about the project. If you don\u2019t know everything, go for MongoDB. This database uses prescribed schema (through the app), so you don\u2019t need to input everything manually. But if you choose Redis, be ready to explicitly define how you want to store information to use this database comfortably. \r\n\r\n\r\nIn sum, many developers go for MongoDB, thanks to its speed, effectiveness, and elegance. After the introduction of Percona Memory Engine (which improved the performance characteristics of this database), their number even increased. At the same time, the novelty and flexibility of Redis makes a preferable choice for pro developers. \r\nAt the same time, you should always keep in mind that Redis and MongoDB are different as a bicycle and a car. In reality, the speed you want, the number of resources available, and the distance you need to complete are the real factors for selecting between these frameworks. \r\nIn the end, both Redis and MongoDB are good at coping with the task of data storage and maintenance."
+}</script>
+<!-- / WP SEO Structured Data pro plugin. -->
+
+
+</body>
+
+<!-- Mirrored from www.intellectsoft.net/blog/redis-vs-mongodb/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Apr 2020 21:37:31 GMT -->
+</html>
+<!-- Hummingbird cache file was created in 0.069113969802856 seconds, on 03-04-20 21:54:52 -->

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 247 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>51527CD1-E35A-473D-A7B0-46FD041543A7</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <style>
+        .line.animated{
+        opacity: 1;
+        stroke-dasharray: 640;
+        stroke-dashoffset: 0;
+        -webkit-animation: dash 1s linear forwards;
+        -o-animation: dash 1s linear forwards;
+        -moz-animation: dash 1s linear forwards;
+        animation: dash 1s linear forwards;
+        }
+
+        .line{
+        opacity: 0
+        }
+
+        @-webkit-keyframes dash{
+        from{
+        stroke-dashoffset: 640;
+        }
+        to{
+        stroke-dashoffset: 0;
+        }
+        }
+        svg{
+        padding: 5px;
+        box-sizing: border-box;
+        overflow: hidden;
+        }
+    </style>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="IS_AI-Solution" transform="translate(-95.000000, -1539.000000)" stroke-width="2">
+            <g id="greater-automation" transform="translate(95.000000, 1540.000000)">
+                <path class="line additional" d="M96.5994318,0 C71.8267045,0 52.6619318,16.8806818 48.7982955,29.875 C31.3835227,32.1931818 19.7642045,47.1988636 19.7642045,65.8409091 C19.7642045,67.2840909 19.8664773,68.6875 20.0142045,70.0795455 C8.75852273,75.5909091 0.997159091,90.0170455 0.997159091,106.982955 C0.997159091,117.767045 5.29261364,130.142045 12.9517045,137.426136 C8.96875,155.352273 15.8664773,190.738636 52.4630682,187.5 C62.9403409,211.295455 82.6505682,222.835227 120.644886,215.909091 L120.644886,0 L96.5994318,0 Z" id="Stroke-1" stroke="#505050"></path>
+                <path class="line additional" d="M84.6494318,65.7244318 C63.9846591,65.7244318 48.7971591,60.7471591 48.7971591,29.8778409" id="Stroke-3" stroke="#505050"></path>
+                <path class="line additional" d="M48.8,101.574432 C58.3681818,107.835795 74.5613636,105.358523 83.2545455,96.2164773 C94.6977273,84.19375 107.544318,83.0744318 120.498864,96.6198864" id="Stroke-5" stroke="#505050"></path>
+                <path class="line additional" d="M120.499432,41.825 C105.749432,47.4272727 89.9994318,43.0977273 84.6471591,29.8761364" id="Stroke-7" stroke="#505050"></path>
+                <path class="line additional" d="M120.646023,165.721591 C106.998295,160.596591 96.4130682,167.3125 92.2369318,177.085227" id="Stroke-9" stroke="#505050"></path>
+                <path class="line additional" d="M60.7494318,155.349432 C51.2267045,153.855114 42.8232955,144.877841 42.8232955,137.423295" id="Stroke-11" stroke="#505050"></path>
+                <path class="line additional" d="M52.4642045,187.5 C52.4642045,165.653409 64.85625,137.426136 96.6005682,137.426136" id="Stroke-13" stroke="#505050"></path>
+                <path class="line additional" d="M137.691477,0 L154.736932,0 L154.736932,25.875 C166.100568,28.0170455 174.486932,31.8920455 182.674432,37.1420455 L201.396023,18.8238636 L226.947159,44.1761364 L208.73125,63.1363636 C213.98125,71.3238636 217.958523,79.5454545 220.100568,90.9090909 L245.646023,90.9090909 L245.646023,125 L220.100568,125 C217.958523,136.363636 214.077841,144.181818 208.827841,152.369318 L227.146023,170.806818 L201.799432,196.215909 L182.674432,177.926136 C174.486932,183.176136 166.100568,187.079545 154.736932,189.227273 L154.736932,215.909091 L137.691477,215.909091" id="Stroke-15" stroke="#1476F2"></path>
+                <path id="blue-line" class="line" d="M137.691477,152.598864 C162.79375,152.598864 183.146023,132.428409 183.146023,107.547727 C183.146023,82.6670455 162.79375,62.5022727 137.691477,62.5022727" stroke="#1476F2"></path>
+                <path class="line additional" d="M30.875,84.6698864 C40.7727273,84.6698864 48.8011364,91.6755682 48.8011364,101.573295 C48.8011364,109.380114 43.8125,117.039205 36.8522727,119.499432" id="Stroke-19" stroke="#505050"></path>
+            </g>
+        </g>
+    </g>
+    <script type="text/javascript">
+        document.animate = function(){
+            var isAnimated = false;
+
+            var animatedElement = document.getElementById("blue-line");
+            animatedElement.setAttribute("class", "line animated");
+            animatedElement.addEventListener("animationstart", function(){
+                isAnimated = true;
+            });
+            if (animatedElement.addEventListener){
+                animatedElement.addEventListener("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }else if (animatedElement.attachEvent){
+                animatedElement.attachEvent("animationend", function(){
+                var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }
+
+
+            setTimeout(function(){
+                if(!isAnimated){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                }
+            },1000)
+
+        }
+    </script>
+</svg>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 248 252" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>C9EB8989-5F65-42D6-845E-C41B7579B16C</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <style>
+        .line.animated{
+            opacity: 1;
+            stroke-dasharray: 640;
+            stroke-dashoffset: 0;
+            -webkit-animation: dash 1s linear forwards;
+            -o-animation: dash 1s linear forwards;
+            -moz-animation: dash 1s linear forwards;
+            animation: dash 1s linear forwards;
+        }
+
+        .line{
+            opacity: 0
+        }
+
+        @-webkit-keyframes dash{
+            from{
+                stroke-dashoffset: 640;
+            }
+            to{
+                stroke-dashoffset: 0;
+            }
+        }
+        svg{
+            padding: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IS_IOT_Page" transform="translate(-97.000000, -3129.000000)" stroke-width="2">
+            <g id="ensure-iot" transform="translate(98.000000, 3130.000000)">
+                <path class="line additional" d="M34.1685649,56.3781321 L56.4692483,56.3781321 L79.7266515,90.546697 L91.1161731,90.546697 M34.1685649,119.020501 L62.642369,119.020501 L34.1685649,119.020501 Z M34.1685649,56.3781321 C34.1685649,65.8143508 26.5205011,73.4624146 17.0842825,73.4624146 C7.64806378,73.4624146 0,65.8143508 0,56.3781321 C0,46.9419134 7.64806378,39.2938497 17.0842825,39.2938497 C26.5205011,39.2938497 34.1685649,46.9419134 34.1685649,56.3781321 Z M34.1685649,119.020501 C34.1685649,128.45672 26.5205011,136.104784 17.0842825,136.104784 C7.64806378,136.104784 0,128.45672 0,119.020501 C0,109.584282 7.64806378,101.936219 17.0842825,101.936219 C26.5205011,101.936219 34.1685649,109.584282 34.1685649,119.020501 Z M68.3371298,215.831435 L96.3382688,175.968109 L130.979499,175.968109 M74.0318907,232.915718 C74.0318907,223.479499 66.3838269,215.831435 56.9476082,215.831435 C47.5113895,215.831435 39.8633257,223.479499 39.8633257,232.915718 C39.8633257,242.351936 47.5113895,250 56.9476082,250 C66.3838269,250 74.0318907,242.351936 74.0318907,232.915718 Z M108.200456,119.020501 L96.8109339,119.020501 L108.200456,119.020501 Z M85.4214123,119.020501 L74.0318907,119.020501 L85.4214123,119.020501 Z M102.505695,90.546697 L113.895216,90.546697 L102.505695,90.546697 Z M119.589977,119.020501 L142.369021,119.020501 L119.589977,119.020501 Z" id="Stroke-1" stroke="#505050"></path>
+                <path class="line" d="M159.453303,232.915718 L183.223235,232.915718 L205.01139,209.441913 L205.01139,112.574032 C233.485194,105.501139 245.449886,83.5364465 245.449886,57.4886105 C245.449886,25.7403189 219.396355,0 187.642369,0 C155.888383,0 130.427107,25.7403189 130.427107,57.4886105 C130.427107,78.7642369 148.063781,97.2892938 159.453303,107.232346 L159.453303,141.993166 L170.842825,150.990888 L170.842825,159.994305 L159.453303,172.875854 L159.453303,180.694761 L170.842825,191.503417 L170.842825,200.506834 L159.453303,209.510251 L159.453303,232.915718 Z" id="blue-line" stroke="#1476F2"></path>
+                <path class="line additional" d="M187.927107,56.3781321 C178.490888,56.3781321 170.842825,48.7300683 170.842825,39.2938497 C170.842825,29.857631 178.490888,22.2095672 187.927107,22.2095672 C197.363326,22.2095672 205.01139,29.857631 205.01139,39.2938497 C205.01139,48.7300683 197.363326,56.3781321 187.927107,56.3781321 Z" id="Path" stroke="#1476F2"></path>
+                <polyline class="line additional" id="Path" stroke="#505050" points="34.1685649 181.66287 56.4692483 181.66287 79.0205011 147.494305 91.1161731 147.494305"></polyline>
+                <path class="line additional" d="M34.1685649,181.66287 C34.1685649,172.226651 26.5205011,164.578588 17.0842825,164.578588 C7.64806378,164.578588 0,172.226651 0,181.66287 C0,191.099089 7.64806378,198.747153 17.0842825,198.747153 C26.5205011,198.747153 34.1685649,191.099089 34.1685649,181.66287 Z" id="Path" stroke="#505050"></path>
+                <path class="line additional" d="M102.505695,147.494305 L113.895216,147.494305 L102.505695,147.494305 Z" id="Path" stroke="#505050"></path>
+                <path class="line additional" d="M125.284738,147.494305 L136.67426,147.494305 L125.284738,147.494305 Z" id="Path" stroke="#505050"></path>
+            </g>
+        </g>
+    </g>
+    <script type="text/javascript">
+        document.animate = function(){
+            var isAnimated = false;
+
+            var animatedElement = document.getElementById("blue-line");
+            animatedElement.setAttribute("class", "line animated");
+            animatedElement.addEventListener("animationstart", function(){
+                isAnimated = true;
+            });
+            if (animatedElement.addEventListener){
+                animatedElement.addEventListener("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }else if (animatedElement.attachEvent){
+                animatedElement.attachEvent("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }
+
+            setTimeout(function(){
+                if(!isAnimated){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                }
+            },1000)
+
+        }
+    </script>
+</svg>

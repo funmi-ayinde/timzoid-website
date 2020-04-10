@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233 238">
+    <style>
+        .line.animated {
+        opacity: 1;
+        stroke-dasharray: 600;
+        stroke-dashoffset: 0;
+        -webkit-animation: dash 2s linear forwards;
+        -o-animation: dash 2s linear forwards;
+        -moz-animation: dash 2s linear forwards;
+        animation: dash 2s linear forwards;
+        }
+
+        .line {
+        opacity: 0;
+        stroke-dasharray: 600;
+        }
+
+        @-webkit-keyframes dash {
+        from {
+        stroke-dashoffset: 600;
+        }
+        to {
+        stroke-dashoffset: 0;
+        }
+        }
+
+        svg {
+        padding: 5px;
+        box-sizing: border-box;
+        overflow: hidden;
+        }
+    </style>
+    <g fill="none" fill-rule="evenodd" stroke-width="2">
+        <path stroke="#323232" class="line additional" stroke-linejoin="round" d="M80 201c2.007-2.011 4.067-5.252 10.483-5.252h73.38c5.822 0 37.858-32.188 41.93-36.762 3.915-4.4 21.37-30.675 26.207-42.014-3.04-4.101-11.253-7.51-20.966-5.251-9.266 2.158-14.717 8.823-20.965 21.007l-24.027 12.499"/>
+        <path stroke="#323232" class="line additional" stroke-linejoin="round" d="M111.36 163h41.92c20.96 0 20.96-26.429 0-26.429h-27.683c-4.37 0-12.555-10.571-19.477-10.571h-26.2c-7.08 0-15.877 5.793-20.96 10.571L38 157.714"/>
+        <path stroke="#323232" class="line additional" stroke-linejoin="round" d="M64.53 237L91 210.53 27.47 147 1 173.47zM27 174l11 11"/>
+        <path stroke="#1476F2" id="blue-line" class="line additional" d="M200.996 34.678L160.25 2.133c-1.27-1.013-3.441-1.493-5.305-.823-.006.005-48.03 18.639-48.03 18.639-2.171.432-3.95 2.126-4.29 4.431l-7.523 50.546c-.318 2.252.063 4.584 1.7 5.887l40.754 32.545c1.557 1.256 2.764 2.037 4.32 1.435l49.291-19.087c2.658-1.029 3.765-2.142 4.13-4.58l7.662-51.473c.228-1.54-.53-3.83-1.964-4.975z"/>
+        <path stroke="#1476F2" class="line additional" d="M153 17l-6.673 40.376L112 70M147 57l34 26"/>
+    </g>
+    <script type="text/javascript">
+        document.animate = function() {
+        var isAnimated = false;
+
+        var animatedElement = document.getElementById("blue-line");
+        animatedElement.setAttribute("class", "line animated");
+        animatedElement.addEventListener("animationstart", function() {
+        isAnimated = true;
+        });
+
+        if (animatedElement.addEventListener) {
+        animatedElement.addEventListener("animationend", function() {
+        var elemArr = document.getElementsByClassName("additional");
+        for (var i = elemArr.length - 1; i>=0 ; i-- )   {
+        elemArr[i].setAttribute("class", "line additional animated");
+        }
+        })
+        } else if (animatedElement.attachEvent) {
+        animatedElement.attachEvent("animationend", function() {
+        var elemArr = document.getElementsByClassName("additional");
+        for (var i = elemArr.length - 1; i>=0 ; i-- ){
+        elemArr[i].setAttribute("class", "line additional animated");
+        }
+        })
+        }
+
+        setTimeout(function() {
+        if(!isAnimated) {
+        var elemArr = document.getElementsByClassName("additional");
+        for (var i = elemArr.length - 1; i>=0 ; i-- ) {
+        elemArr[i].setAttribute("class", "line additional animated");
+        }
+        }
+        }, 1000)
+        }
+    </script>
+</svg>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 187 252" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>AFD047F8-C807-4FE3-99A1-49246A3A8A7B</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <style>
+        .line.animated{
+            opacity: 1;
+            stroke-dasharray: 340;
+            stroke-dashoffset: 0;
+            -webkit-animation: dash 1s linear forwards;
+            -o-animation: dash 1s linear forwards;
+            -moz-animation: dash 1s linear forwards;
+            animation: dash 1s linear forwards;
+        }
+
+        .line{
+            opacity: 0
+        }
+
+        @-webkit-keyframes dash{
+        from{
+            stroke-dashoffset: 340;
+        }
+        to{
+            stroke-dashoffset: 0;
+        }
+        }
+        svg{
+            padding: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IS_AI-Solution" transform="translate(-127.000000, -2744.000000)" stroke-width="2">
+            <g id="greater-business-security" transform="translate(128.000000, 2745.000000)">
+                <polyline class="line additional" id="Stroke-1" stroke="#505050" points="70.6521739 206.521739 92.3913043 206.521739 114.130435 206.521739"></polyline>
+                <path class="line additional" d="M76.0875,173.913043 L76.0875,173.913043 C79.5657609,177.391304 84.288587,179.347826 89.2070652,179.347826 L95.5766304,179.347826 C100.495109,179.347826 105.2125,177.396739 108.690761,173.918478 L108.696196,173.913043" id="Stroke-2" stroke="#505050"></path>
+                <path class="line additional" d="M76.0869565,119.565217 L69.1358696,116.086957 C66.5597826,114.798913 63.7173913,114.130435 60.8369565,114.130435 L45.7282609,114.130435 C40.8097826,114.130435 36.0869565,116.086957 32.6086957,119.565217" id="Stroke-4" stroke="#505050"></path>
+                <path class="line additional" d="M70.6521739,135.869565 L43.4782609,135.869565" id="Stroke-6" stroke="#505050"></path>
+                <path class="line additional" d="M108.695652,119.565217 L115.646739,116.086957 C118.222826,114.798913 121.065217,114.130435 123.945652,114.130435 L139.054348,114.130435 C143.972826,114.130435 148.695652,116.086957 152.173913,119.565217" id="Stroke-8" stroke="#505050"></path>
+                <path class="line additional" d="M114.130435,135.869565 L141.304348,135.869565" id="Stroke-10" stroke="#505050"></path>
+                <path class="line additional" d="M135.869565,228.26087 C126.673913,240.282609 106.88587,250 92.3913043,250 C77.8967391,250 58.1086957,240.282609 48.9130435,228.26087" id="Stroke-12" stroke="#505050"></path>
+                <path class="line additional" d="M179.347826,76.0869565 C176.570652,59.7336957 168.913043,41.7282609 156.157609,27.173913 C132.309783,-0.0434782609 105.070652,-8.11234575e-14 92.3913043,-8.11234575e-14 C79.7119565,-8.11234575e-14 52.4673913,-0.0434782609 28.625,27.173913 C15.8695652,41.7282609 8.21195652,59.7336957 5.43478261,76.0869565" id="Stroke-14" stroke="#505050"></path>
+                <path class="line additional" d="M66.8711957,32.4342391 C67.3494565,49.5157609 103.664674,65.5266304 130.436413,77.5972826" id="Stroke-16" stroke="#505050"></path>
+                <path class="line additional" d="M78.213587,48.738587 C70.8548913,51.4125 50.963587,62.0972826 38.0451087,73.4342391" id="Stroke-18" stroke="#505050"></path>
+                <polyline class="line" id="blue-line" stroke="#1476F2" points="0 130.434783 0 92.3913043 38.0434783 92.3913043"></polyline>
+                <polyline class="line additional" id="Stroke-22" stroke="#1476F2" points="0 173.913043 0 211.956522 38.0434783 211.956522"></polyline>
+                <polyline class="line additional" id="Stroke-24" stroke="#1476F2" points="184.782609 130.434783 184.782609 92.3913043 146.73913 92.3913043"></polyline>
+                <polyline class="line additional" id="Stroke-26" stroke="#1476F2" points="184.782609 173.913043 184.782609 211.956522 146.73913 211.956522"></polyline>
+            </g>
+        </g>
+    </g>
+    <script type="text/javascript">
+        document.animate = function(){
+            var isAnimated = false;
+
+            var animatedElement = document.getElementById("blue-line");
+            animatedElement.setAttribute("class", "line animated");
+            animatedElement.addEventListener("animationstart", function(){
+                isAnimated = true;
+            });
+            if (animatedElement.addEventListener){
+                animatedElement.addEventListener("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }else if (animatedElement.attachEvent){
+                animatedElement.attachEvent("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }
+
+            setTimeout(function(){
+                if(!isAnimated){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                }
+            },1000)
+
+        }
+    </script>
+</svg>

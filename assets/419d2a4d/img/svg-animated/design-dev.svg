@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235 235">
+    <style>
+        .line.animated {
+        opacity: 1;
+        stroke-dasharray: 600;
+        stroke-dashoffset: 0;
+        -webkit-animation: dash 2s linear forwards;
+        -o-animation: dash 2s linear forwards;
+        -moz-animation: dash 2s linear forwards;
+        animation: dash 2s linear forwards;
+        }
+
+        .line {
+        opacity: 0;
+        stroke-dasharray: 600;
+        }
+
+        @-webkit-keyframes dash {
+        from {
+        stroke-dashoffset: 600;
+        }
+        to {
+        stroke-dashoffset: 0;
+        }
+        }
+
+        svg {
+        padding: 5px;
+        box-sizing: border-box;
+        overflow: hidden;
+        }
+    </style>
+    <g fill="none" fill-rule="evenodd" stroke-linejoin="round" stroke-width="2">
+        <path stroke="#323232" class="line additional" d="M31 197.806c-2.085-3.585-6.355-5.064-10-5.064-11.045 0-20 9.07-20 20.258V76.258C1 65.071 9.955 56 21 56c3.645 0 8.28.871 10 5.065v136.741zM81 82H31M203 82h-50M234 214c0 11.045-9.072 20-20.26 20H21.26C10.073 234 1 225.045 1 214M204 197.806c2.085-3.585 6.355-5.064 10-5.064 11.045 0 20 9.07 20 20.258V76.258C234 65.071 225.045 56 214 56c-3.645 0-8.28.871-10 5.065v136.741z"/>
+        <path stroke="#1476F2" id="blue-line" class="line additional" d="M118 1l-10 10.25v20.5L118 42l10-10.25v-20.5zM102 87L56 199M174 199L133 87M118 122v46M142 67c0 13.805-11.19 25-25 25S92 80.805 92 67s11.19-25 25-25 25 11.195 25 25zM168 118c-13.403 14.14-29.366 25-50.5 25S80.403 132.14 67 118"/>
+    </g>
+    <script type="text/javascript">
+        document.animate = function() {
+        var isAnimated = false;
+
+        var animatedElement = document.getElementById("blue-line");
+        animatedElement.setAttribute("class", "line animated");
+        animatedElement.addEventListener("animationstart", function() {
+        isAnimated = true;
+        });
+
+        if (animatedElement.addEventListener) {
+        animatedElement.addEventListener("animationend", function() {
+        var elemArr = document.getElementsByClassName("additional");
+        for (var i = elemArr.length - 1; i>=0 ; i-- )   {
+        elemArr[i].setAttribute("class", "line additional animated");
+        }
+        })
+        } else if (animatedElement.attachEvent) {
+        animatedElement.attachEvent("animationend", function() {
+        var elemArr = document.getElementsByClassName("additional");
+        for (var i = elemArr.length - 1; i>=0 ; i-- ){
+        elemArr[i].setAttribute("class", "line additional animated");
+        }
+        })
+        }
+
+        setTimeout(function() {
+        if(!isAnimated) {
+        var elemArr = document.getElementsByClassName("additional");
+        for (var i = elemArr.length - 1; i>=0 ; i-- ) {
+        elemArr[i].setAttribute("class", "line additional animated");
+        }
+        }
+        }, 1000)
+        }
+    </script>
+</svg>

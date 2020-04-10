@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 252 252" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>85AC9ACE-45B0-4990-A763-9953499C8B44</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <style>
+        .line.animated{
+            opacity: 1;
+            stroke-dasharray: 640;
+            stroke-dashoffset: 0;
+            -webkit-animation: dash 1s linear forwards;
+            -o-animation: dash 1s linear forwards;
+            -moz-animation: dash 1s linear forwards;
+            animation: dash 1s linear forwards;
+        }
+
+        .line{
+            opacity: 0
+        }
+
+        @-webkit-keyframes dash{
+            from{
+                stroke-dashoffset: 640;
+            }
+            to{
+                stroke-dashoffset: 0;
+            }
+        }
+        svg{
+            padding: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IS_IOT_Page" transform="translate(-95.000000, -2529.000000)" stroke-width="2">
+            <g id="optimise-operations" transform="translate(96.000000, 2530.000000)">
+                <path class="line additional" d="M139.534884,34.8837209 L139.534884,5.81395349 L93.0232558,5.81395349 L93.0232558,32.1162791 C84.5116279,34.3139535 76.4825581,37.6627907 69.0988372,42.0232558 L50.5,23.4244186 L17.6104651,56.3139535 L36.2093023,74.9127907 C31.8488372,82.2965116 28.5,90.3255814 26.3023256,98.8372093 L0,98.8372093 L0,145.348837 L26.3023256,145.348837 C28.5,153.860465 31.8488372,161.889535 36.2093023,169.273256 L17.6104651,187.872093 L50.5,220.761628 L69.0988372,202.162791 C76.4825581,206.523256 84.5116279,209.872093 93.0232558,212.069767 L93.0232558,238.372093 L139.534884,238.372093 L139.534884,209.302326 M151.162791,58.1395349 L156.976744,58.1395349 L186.046512,29.0697674 M186.046512,220.930233 L151.162791,186.046512 L116.27907,186.046512 C80.9593023,186.046512 52.3255814,157.412791 52.3255814,122.093023 C52.3255814,86.7732558 80.9593023,58.1395349 116.27907,58.1395349 M215.116279,180.232558 L191.860465,180.232558 L162.790698,151.162791 L156.976744,151.162791 M215.116279,17.4418605 C215.116279,27.0755814 207.30814,34.8837209 197.674419,34.8837209 C188.040698,34.8837209 180.232558,27.0755814 180.232558,17.4418605 C180.232558,7.80813953 188.040698,0 197.674419,0 C207.30814,0 215.116279,7.80813953 215.116279,17.4418605 Z M250,122.093023 C250,131.726744 242.19186,139.534884 232.55814,139.534884 C222.924419,139.534884 215.116279,131.726744 215.116279,122.093023 C215.116279,112.459302 222.924419,104.651163 232.55814,104.651163 C242.19186,104.651163 250,112.459302 250,122.093023 Z M250,180.232558 C250,189.866279 242.19186,197.674419 232.55814,197.674419 C222.924419,197.674419 215.116279,189.866279 215.116279,180.232558 C215.116279,170.598837 222.924419,162.790698 232.55814,162.790698 C242.19186,162.790698 250,170.598837 250,180.232558 Z M215.116279,232.55814 C215.116279,242.19186 207.30814,250 197.674419,250 C188.040698,250 180.232558,242.19186 180.232558,232.55814 C180.232558,222.924419 188.040698,215.116279 197.674419,215.116279 C207.30814,215.116279 215.116279,222.924419 215.116279,232.55814 Z M156.976744,122.093023 L215.116279,122.093023 L156.976744,122.093023 Z M110.465116,122.093023 L122.093023,122.093023 L110.465116,122.093023 Z M133.72093,122.093023 L145.348837,122.093023 L133.72093,122.093023 Z M133.72093,151.162791 L145.348837,151.162791 L133.72093,151.162791 Z M127.906977,58.1395349 L139.534884,58.1395349 L127.906977,58.1395349 Z" id="Stroke-17" stroke="#505050"></path>
+                <path class="line additional" d="M122.093023,151.162791 L116.27907,151.162791 C100.226744,151.162791 87.2093023,138.151163 87.2093023,122.093023 C87.2093023,106.034884 100.226744,93.0232558 116.27907,93.0232558 L162.790698,93.0232558 L186.046512,69.7674419 L215.116279,69.7674419" id="Path" stroke="#1476F2"></path>
+                <path class="line" d="M250,69.7674419 C250,79.4011628 242.19186,87.2093023 232.55814,87.2093023 C222.924419,87.2093023 215.116279,79.4011628 215.116279,69.7674419 C215.116279,60.1337209 222.924419,52.3255814 232.55814,52.3255814 C242.19186,52.3255814 250,60.1337209 250,69.7674419 Z" id="blue-line" stroke="#1476F2"></path>
+            </g>
+        </g>
+    </g>
+    <script type="text/javascript">
+        document.animate = function(){
+            var isAnimated = false;
+
+            var animatedElement = document.getElementById("blue-line");
+            animatedElement.setAttribute("class", "line animated");
+            animatedElement.addEventListener("animationstart", function(){
+                isAnimated = true;
+            });
+            if (animatedElement.addEventListener){
+                animatedElement.addEventListener("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }else if (animatedElement.attachEvent){
+                animatedElement.attachEvent("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }
+
+            setTimeout(function(){
+                if(!isAnimated){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                }
+            },1000)
+
+        }
+    </script>
+</svg>

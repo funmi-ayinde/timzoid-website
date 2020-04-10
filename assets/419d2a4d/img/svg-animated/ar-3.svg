@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 247 195" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>9D520CC5-DAD8-412E-8984-54F2F16C5348</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <style>
+        .line.animated{
+            opacity: 1;
+            stroke-dasharray: 760;
+            stroke-dashoffset: 0;
+            -webkit-animation: dash 1s linear forwards;
+            -o-animation: dash 1s linear forwards;
+            -moz-animation: dash 1s linear forwards;
+            animation: dash 1s linear forwards;
+        }
+
+        .line{
+            opacity: 0
+        }
+
+        @-webkit-keyframes dash{
+        from{
+            stroke-dashoffset: 760;
+        }
+        to{
+            stroke-dashoffset: 0;
+        }
+        }
+        svg{
+            padding: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IS_Augmented-reality" transform="translate(-99.000000, -3613.000000)" stroke-width="2">
+            <g id="dimension-for-customer-experience" transform="translate(100.000000, 3614.000000)">
+                <g id="Page-1">
+                    <path class="line" id="blue-line" d="M228.263587,51.6619565 C237.263587,51.6619565 244.567935,58.9608696 244.567935,67.9663043 L244.567935,176.661957 C244.567935,185.667391 237.263587,192.966304 228.263587,192.966304 L16.3070652,192.966304 C7.30163043,192.966304 0.0027173913,185.667391 0.0027173913,176.661957 L0.0027173913,67.9663043 C0.0027173913,58.9608696 7.30163043,51.6619565 16.3070652,51.6619565 L228.263587,51.6619565 Z" stroke="#505050"></path>
+                    <path class="line additional" d="M27.173913,192.966304 L27.173913,51.6619565" id="Stroke-3" stroke="#505050"></path>
+                    <path class="line additional" d="M211.956522,192.966304 L211.956522,51.6619565" id="Stroke-5" stroke="#505050"></path>
+                    <path class="line additional" d="M228.26087,133.183696 L228.26087,111.444565" id="Stroke-7" stroke="#505050"></path>
+                    <path class="line additional" d="M68,21 L116.88587,43.2228261" id="Stroke-9" stroke="#1476F2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path class="line additional" d="M68,135.222826 L116.88587,113 L68,135.222826 Z" id="Stroke-9-Copy" stroke="#1476F2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="15"></path>
+                    <polygon class="line additional" stroke="#1476F2" stroke-linecap="round" stroke-linejoin="round" points="116.802717 0 67.8896739 21.7391304 67.8896739 135.875 116.802717 157.61413 165.715761 135.875 165.715761 21.7391304"></polygon>
+                    <path class="line additional" d="M165.88587,21 L117,43.2228261" id="Stroke-13" stroke="#1476F2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path class="line additional" d="M165.88587,135.222826 L117,113 L165.88587,135.222826 Z" id="Stroke-13-Copy" stroke="#1476F2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="15"></path>
+                    <path class="line additional" d="M116.802717,43.4782609 L116.802717,157.61413" id="Stroke-15" stroke="#1476F2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+    <script type="text/javascript">
+        document.animate = function(){
+            var isAnimated = false;
+
+            var animatedElement = document.getElementById("blue-line");
+            animatedElement.setAttribute("class", "line animated");
+            animatedElement.addEventListener("animationstart", function(){
+                isAnimated = true;
+            });
+            if (animatedElement.addEventListener){
+                animatedElement.addEventListener("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }else if (animatedElement.attachEvent){
+                animatedElement.attachEvent("animationend", function(){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                })
+            }
+
+            setTimeout(function(){
+                if(!isAnimated){
+                    var elemArr = document.getElementsByClassName("additional");
+                    for (var i = elemArr.length - 1; i>=0 ; i-- ){
+                        elemArr[i].setAttribute("class", "line additional animated");
+                    }
+                }
+            },1000)
+        }
+    </script>
+</svg>

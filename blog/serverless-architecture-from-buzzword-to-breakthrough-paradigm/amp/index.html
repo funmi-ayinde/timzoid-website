@@ -1,0 +1,625 @@
+<!-- This page is cached by the Hummingbird Performance plugin v2.4.1 - https://wordpress.org/plugins/hummingbird-performance/. --><!doctype html>
+<html amp lang="en-US">
+
+<!-- Mirrored from www.intellectsoft.net/blog/serverless-architecture-from-buzzword-to-breakthrough-paradigm/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Apr 2020 21:29:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.intellectsoft.net/blog/#website","url":"https://www.intellectsoft.net/blog/","name":"Intellectsoft Blog","potentialAction":{"@type":"SearchAction","target":"https://www.intellectsoft.net/blog/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.intellectsoft.net/blog/serverless-architecture-from-buzzword-to-breakthrough-paradigm/#primaryimage","url":"https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-e1582907372936.jpg","width":500,"height":231,"caption":"serverless architecture blog post one"},{"@type":"WebPage","@id":"https://www.intellectsoft.net/blog/serverless-architecture-from-buzzword-to-breakthrough-paradigm/#webpage","url":"https://www.intellectsoft.net/blog/serverless-architecture-from-buzzword-to-breakthrough-paradigm/","inLanguage":"en-US","name":"Serverless Architecture: From Buzzword to Breakthrough Paradigm - Intellectsoft Blog","isPartOf":{"@id":"https://www.intellectsoft.net/blog/#website"},"primaryImageOfPage":{"@id":"https://www.intellectsoft.net/blog/serverless-architecture-from-buzzword-to-breakthrough-paradigm/#primaryimage"},"datePublished":"2020-02-27T14:37:00+00:00","dateModified":"2020-02-27T14:52:21+00:00","author":{"@id":"https://www.intellectsoft.net/blog/#/schema/person/934d88e6448434bc0f87550678a8637e"}},{"@type":["Person"],"@id":"https://www.intellectsoft.net/blog/#/schema/person/934d88e6448434bc0f87550678a8637e","name":"Anastasiia Hibaieva","image":{"@type":"ImageObject","@id":"https://www.intellectsoft.net/blog/#authorlogo","url":"https://secure.gravatar.com/avatar/5e777493cd8ae0902fee5b35c44765ce?s=96&d=mm&r=g","caption":"Anastasiia Hibaieva"},"sameAs":[]}]}</script>
+	<title>Serverless Architecture: From Buzzword to Breakthrough Paradigm - Intellectsoft Blog</title>
+		<link rel="canonical" href="../index.html" />
+	<script type='text/javascript' src='https://cdn.ampproject.org/v0.js' async></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><meta name="generator" content="AMP Plugin v1.4.4; mode=reader; experiences=website"><meta name="generator" content="WordPress 5.3.2" />
+	<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ * Additionally, in side of \AMP_Img_Sanitizer::determine_dimensions() it could $amp_img->setAttribute( 'object-fit', 'contain' )
+ * so that the following rules wouldn't be needed.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+amp-anim.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+amp-carousel .amp-wp-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1rem;
+}
+
+.wp-block-gallery[data-amp-carousel="true"] {
+	display: block;
+	flex-wrap: unset;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 600px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( ../../wp-content/plugins/amp/assets/images/placeholder-icon.png) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline stylesheets */
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fe3f5cc{font-weight:400}	</style>
+</head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="../../index.html">
+										<amp-img src="../../wp-content/uploads/cropped-favicon-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img>
+						<span class="amp-site-title">
+				Intellectsoft Blog			</span>
+		</a>
+
+					</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">Serverless Architecture: From Buzzword to Breakthrough Paradigm</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/5e777493cd8ae0902fee5b35c44765ce?s=24&amp;d=mm&amp;r=g" alt="Anastasiia Hibaieva" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">Anastasiia Hibaieva</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-02-27T17:37:00+00:00">
+		1 month ago	</time>
+</div>
+	</header>
+
+	<figure class="amp-wp-article-featured-image wp-caption">
+	<amp-img width="1024" height="473" src="../../wp-content/uploads/serverless_architecture-1024x473.jpg" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="serverless architecture blog post one" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-1024x473.jpg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-300x138.jpg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-768x354.jpg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-600x277.jpg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-450x208.jpg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-1000x462.jpg 1000w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-e1582907372936.jpg 500w" layout="intrinsic"><noscript><img width="1024" height="473" src="../../wp-content/uploads/serverless_architecture-1024x473.jpg" class="attachment-large size-large wp-post-image" alt="serverless architecture blog post one" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-1024x473.jpg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-300x138.jpg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-768x354.jpg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-600x277.jpg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-450x208.jpg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-1000x462.jpg 1000w, https://www.intellectsoft.net/blog/wp-content/uploads/serverless_architecture-e1582907372936.jpg 500w" sizes="(max-width: 1024px) 100vw, 1024px"></noscript></amp-img>	</figure>
+
+	<div class="amp-wp-article-content">
+		<p>Serverless architecture is a step beyond in the technological revolution. Since 2015 (or some say 2012), it has changed the nature of computing. And there is no way back. The real question is, should you consider switching to serverless too?</p>
+<p><amp-img class="aligncenter size-full wp-image-18783 amp-wp-enforced-sizes" src="../../wp-content/uploads/pexels-photo-3531902.jpg" alt="serverless architecture picture of server" width="2250" height="1500" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902.jpeg 2250w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-300x200.jpeg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-1024x683.jpeg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-768x512.jpeg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-1536x1024.jpeg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-2048x1365.jpeg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-600x400.jpeg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-450x300.jpeg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-1000x667.jpeg 1000w" layout="intrinsic"><noscript><img class="aligncenter size-full wp-image-18783" src="../../wp-content/uploads/pexels-photo-3531902.jpg" alt="serverless architecture picture of server" width="2250" height="1500" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902.jpeg 2250w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-300x200.jpeg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-1024x683.jpeg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-768x512.jpeg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-1536x1024.jpeg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-2048x1365.jpeg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-600x400.jpeg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-450x300.jpeg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-3531902-1000x667.jpeg 1000w" sizes="(max-width: 2250px) 100vw, 2250px"></noscript></amp-img></p>
+<p><b>Summary:</b></p>
+<ol>
+<li class="amp-wp-fe3f5cc">What is serverless architecture, and how does it work? Scale-to-zero, FaaS, event-driven approach and managed services explained.</li>
+<li class="amp-wp-fe3f5cc">Why is serverless the future of development? Some of the most significant advantages it has.</li>
+<li class="amp-wp-fe3f5cc">What to keep in mind if you’re considering serverless? Risks, cons, and how to get prepared for a new solution.</li>
+<li class="amp-wp-fe3f5cc">Should your business use serverless architecture today? Statistics and forecast for 2025.</li>
+</ol>
+<h1>What is serverless?</h1>
+<p>As it is with any new innovation, there is no versatile definition that works for everybody. In the case of serverless, it’s even more real because the concept has developed in a relatively short time. And still, lots of people confuse it with other concepts. Here’s the broad, yet the simple definition of “serverless” we think fits it the best:</p>
+<blockquote><p>Serverless is a paradigm of executing applications in cloud-native environments that influences the way applications are built and deployed and makes use of cloud-computing advantages.</p></blockquote>
+<p>Simon Wardley, a “serverless” advocate, <a href="https://twitter.com/swardley/status/1073379461473730560" target="_blank" rel="noopener noreferrer">defines</a> it as:</p>
+<blockquote><p>“[Serverless is] an event-driven, utility-based, stateless, code execution environment in which you write code and consume services.”</p></blockquote>
+<h3>A couple of words on What Serverless is NOT:</h3>
+<ul>
+<li class="amp-wp-fe3f5cc"><b>It’s not a container. </b>“A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings. Available for both Linux and Windows based apps, containerized software will always run the same, regardless of the environment. Containers isolate software from its surroundings, for example, differences between development and staging environments and help reduce conflicts between teams running different software on the same infrastructure,” — shares <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker.com;</a></li>
+<li class="amp-wp-fe3f5cc"><b>It’s not a PaaS.</b> Unlike serverless, PaaS refers to a system where there is more (compared to serverless) control over deployment environment; applications take a while to spin up; applications need to be configured to scale automatically.</li>
+</ul>
+<p><amp-img class="aligncenter size-full wp-image-18782 amp-wp-enforced-sizes" src="../../wp-content/uploads/pexels-photo-1181676.jpg" alt="girl works with panoramic view" width="2247" height="1500" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676.jpeg 2247w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-300x200.jpeg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-1024x684.jpeg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-768x513.jpeg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-1536x1025.jpeg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-2048x1367.jpeg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-600x401.jpeg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-450x300.jpeg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-1000x668.jpeg 1000w" layout="intrinsic"><noscript><img class="aligncenter size-full wp-image-18782" src="../../wp-content/uploads/pexels-photo-1181676.jpg" alt="girl works with panoramic view" width="2247" height="1500" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676.jpeg 2247w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-300x200.jpeg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-1024x684.jpeg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-768x513.jpeg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-1536x1025.jpeg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-2048x1367.jpeg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-600x401.jpeg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-450x300.jpeg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/pexels-photo-1181676-1000x668.jpeg 1000w" sizes="(max-width: 2247px) 100vw, 2247px"></noscript></amp-img></p>
+<p>In many sources, you can also find that serverless architecture also means <b>“managed services that scale to zero.”</b> That’s why the scale-to-zero approach or pay for the consumption of computing resources (instead of allocation) is a key concept of the serverless. Let’s dive in.</p>
+<h2>Scaling to zero as the main concept</h2>
+<p>“Scale to zero” stops consuming resources when there are no requests. Therefore, computation resources become consumed when in use. Serverless cloud providers automatically scale out the application to handle the increased load.</p>
+<p>It reduces the overall costs because <b>customers are only billed for the time that the application is running.</b> It’s also known as pay-per-use (pay for consumption and not for allocation). That’s why scale-to-zero is appropriately seen as the main concept of serverless computing.</p>
+<h2>Functions as code</h2>
+<p>Serverless is frequently used in conjunction with a <b>function-as-a-service (FaaS)</b> offering. In this case, the code is written as a function. In turn, the function acts as a small single-purpose piece of code that runs dynamically in response to some event trigger or on schedule.</p>
+<p>Besides the fact that FaaS allows developers to run backend code without managing their server systems, here are some more essential aspects of it:</p>
+<ul>
+<li class="amp-wp-fe3f5cc">When it comes to language and environment, FaaS functions are regular applications, but have a range of architectural restrictions;</li>
+<li class="amp-wp-fe3f5cc">Using FaaS with serverless computing requires a different approach to deployment as compared to when you manage your servers. Developers upload code in a FaaS environment to the FaaS vendor who then takes over everything related to deployment. Developers don’t have to do anything;</li>
+<li class="amp-wp-fe3f5cc">A FaaS vendor covers all the scaling needs. Developers write a function to assume horizontal-scaled parallelism, and the FaaS vendor covers everything scaling-related from that point. Horizontal scaling is fully automated and elastic;</li>
+<li class="amp-wp-fe3f5cc">The FaaS provider fully manages resource provisioning and allocation.</li>
+</ul>
+<p>To get started with FaaS, developers simply bring their function code and wire up event triggers. This is where an event-driven architecture steps in.</p>
+<h2>Events as triggers</h2>
+<p>The <b>event-driven architecture (or simply EDA)</b> is a software architecture paradigm where code runs in response to events. An event means any change of state in the system, for example, a new message in a queue, the changed record in a DB, a file upload, etc.</p>
+<p>Simply put, EDA promotes production, consumption, and reaction to any events. In turn, events trigger business functions or code. For example, when a consumer books a hotel room, the room’s state changes from “free” to “booked”. A hotel booking system architecture may treat this state change as an event whose occurrence can be made known to other applications within the architecture.</p>
+<h2>Services are all managed</h2>
+<p>In a serverless architecture, developers don’t worry about supporting any related services. Such services can include databases, storage, message queues, stream processing, caches, etc.</p>
+<p>In turn, developers can connect <b>managed services</b> together, so they shouldn’t think about provisioning, maintaining, and administering these servers and systems. Also, there is no need to ensure application fault tolerance and availability. Cloud providers handle these aspects for them.</p>
+<h1>What are the benefits of serverless?</h1>
+<p>Before considering the serverless approach for your business, let’s take a closer look at the advantages it has.</p>
+<h3><b>1 — Lower Operational Costs</b></h3>
+<p>With a Serverless architecture, you pay the vendor only for resources your application consumed, meaning you do not need to allocate costs for managing your own servers, databases, and application logic.</p>
+<p><amp-img class="aligncenter size-full wp-image-18784 amp-wp-enforced-sizes" src="../../wp-content/uploads/startup-photos-1.jpg" alt="girls work hard to get tasks done" width="2250" height="1500" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1.jpg 2250w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-300x200.jpg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-1024x683.jpg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-768x512.jpg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-1536x1024.jpg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-2048x1365.jpg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-600x400.jpg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-450x300.jpg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-1000x667.jpg 1000w" layout="intrinsic"><noscript><img class="aligncenter size-full wp-image-18784" src="../../wp-content/uploads/startup-photos-1.jpg" alt="girls work hard to get tasks done" width="2250" height="1500" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1.jpg 2250w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-300x200.jpg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-1024x683.jpg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-768x512.jpg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-1536x1024.jpg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-2048x1365.jpg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-600x400.jpg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-450x300.jpg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-1-1000x667.jpg 1000w" sizes="(max-width: 2250px) 100vw, 2250px"></noscript></amp-img></p>
+<p>While you get the same cost reduction benefits from PaaS (platform as a service) and IaaS (infrastructure as a service), the two do not allow you to pay only for the resources you consume, making Serverless a cheaper option.</p>
+<h4>Automated &amp; More Cost-Efficient Scaling</h4>
+<p>Serverless comes with automatic and elastic horizontal scaling that is fully managed by the vendor. In many cases, this allows you to cut budget costs in a big way.</p>
+<h4>More Optimization — Fewer Expenses</h4>
+<p>With a Serverless architecture, there is a direct link between code optimization and operational costs. The more you optimize your application’s code, the less you pay.</p>
+<p>Say, your app needs a second to process an event; if you reduce the time to 500 ms, you may instantly save 50% percent from what you paid for minute-long processing. The amount you save may change from vendor to vendor, but the overall picture remains the same — you can save a lot).</p>
+<h3><b>2 — Simplified Operational Management</b></h3>
+<p>Before starting with this section, it is essential to go back to the fact that Serverless has not matured yet, and different operational nuances will arise as you start using it. Still, that does not dismiss the significant benefits of Serverless architecture in operational management. Let’s see what they are.</p>
+<h4>Next-to-no System Administration</h4>
+<p>In short, an utterly serverless solution needs zero system administration. The process of packaging and deploying a FaaS function is simple compared to deploying a server — you only need to package your code into a zip file and upload it to the vendor. That’s it. More so, if you are only starting with your application, you can skip the packaging stage and write the code right to the provider’s console.</p>
+<h4>More Agility</h4>
+<p>The nature of Serverless allows your team to decrease time to market in a reasonable fashion. Plus, with a faster deployment time, teams can experiment with new features and see if the work quickly at a very low cost and with little friction. This, in turn, lowers the lead time and may result in a better final product.</p>
+<p><amp-img class="aligncenter size-full wp-image-18785 amp-wp-enforced-sizes" src="../../wp-content/uploads/startup-photos-2.jpg" alt="man looking on his roadmap" width="2250" height="1500" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2.jpg 2250w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-300x200.jpg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-1024x683.jpg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-768x512.jpg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-1536x1024.jpg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-2048x1365.jpg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-600x400.jpg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-450x300.jpg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-1000x667.jpg 1000w" layout="intrinsic"><noscript><img class="aligncenter size-full wp-image-18785" src="../../wp-content/uploads/startup-photos-2.jpg" alt="man looking on his roadmap" width="2250" height="1500" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2.jpg 2250w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-300x200.jpg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-1024x683.jpg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-768x512.jpg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-1536x1024.jpg 1536w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-2048x1365.jpg 2048w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-600x400.jpg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-450x300.jpg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/startup-photos-2-1000x667.jpg 1000w" sizes="(max-width: 2250px) 100vw, 2250px"></noscript></amp-img></p>
+<h3><b>3 — </b><b>Faster time to market</b></h3>
+<p>Speed is a new big. Every one aims to get their applications to market as soon as possible. With serverless, it’s quicker and easier: no need to worry about wiring up custom components, the code is shipped many times faster, and there’s less to build from scratch. As a result, developers run deployments with less fuss.</p>
+<h3><b>4 — Less Impact on Environment</b></h3>
+<p>The world has seen a big spike in the number of data centers in the last ten years, which increased the amount of burnt fossil fuel significantly. Tech giants are considering building centers near renewable energy sources. Still, this will not be enough to reduce the impact due to another issue: highly inefficient capacity management.</p>
+<p>According to Forbes, standard servers in organizations deliver <a href="https://www.forbes.com/sites/benkepes/2015/06/03/30-of-servers-are-sitting-comatose-according-to-research/#491cd25d59c7" target="_blank" rel="noopener noreferrer">no more than 5 to 15 percent</a> of their maximum computing output on average in a year. Serverless computing, on the other hand, frees companies from the challenging task of provisioning computing, capacity all the while allowing serverless vendors to allow just the right amount of resources for their clients, and only when they need them. So, serverless may be the one and the only solution to optimize data center resources worldwide, lowering their environmental impact dramatically.</p>
+<h1>What to keep in mind if you’re considering serverless?</h1>
+<p>Serverless has not matured yet, and this way of building and deploying applications has its advantages just as it has some drawbacks. There is an array of issues you need to know about before switching to this paradigm. We will take a closer look at the inherent flaws of the concept, the ones that will never be fixed entirely.</p>
+<h3><b>Lack of Control</b></h3>
+<p>Using Serverless means your vendor is in control of the parts of your system. This may lead to a wide variety of issues, including <b>functionality loss, forced API upgrades, system downtime</b>, and other issues that may affect your application and its users.</p>
+<h3><b>Security </b></h3>
+<p>Every newly emerged concept always has a list of security issues, and that’s also the case with serverless. From insecure serverless deployment configuration to inadequate monitoring and logging of functions and insecure third-party dependencies, these are some of the security issues to pay attention to before jumping in a serverless world.</p>
+<h3><b>BaaS-Only Serverless Architecture Issues</b></h3>
+<p>Serverless may decrease your operational resources, but not entirely. In the case of a 100% BaaS-based architecture,<b> all the logic will be in the client.</b> Backend-as-a-Service (or BaaS) is a cloud service model in which developers outsource all the behind-the-scenes aspects of a web or mobile application so that they only have to write and maintain the frontend.</p>
+<p>So, for your next platforms, you will need to repeat the implementation of a subset of that logic. If you need to migrate to a new database, this will require code replication or coordination change for all of your clients. Another issue with a full BaaS architecture is that you cannot optimize your server design for client performance in no way.</p>
+<p>On the bright side, if your serverless architecture uses only FaaS, these issues are non-existent.</p>
+<h3><b>Technology Limitations</b></h3>
+<p>Not all technologies can be used due to the scale-to-zero concept. The so-called slow <b>“cold start”</b> (first execution after scaling to zero) can lead to performance issues. Some applications require more time to start and then work fast. And for serverless fast startup time is always crucial.</p>
+<h3><b>Doesn’t Suite Some Tasks</b></h3>
+<p>There are some tasks where serverless is <b>worse fit than traditional models.</b> For such tasks, the usage of serverless may lead to increasing costs.</p>
+<h3><b>FaaS-Only Serverless Architecture Issues</b></h3>
+<p>FaaS functions have major <b>local state restrictions</b>, meaning you should not take it as given that the state from one invocation of a FaaS function will be available to another invocation of the same function.</p>
+<p>If you cannot store states in memory, using a fast NoSQL database may do the trick alongside a number of other options, but all of them are significantly slower than in-memory or on-machine persistence, and the latter will not fit each and every project.</p>
+<h1>The Future is Serverless</h1>
+<p>It’s hard to predict where serverless computing will be a year from now. Looking back at the current state of serverless, its evolution over the last several years, how vendors address existing issues, as well as the growing community, we can expect the following developments in years to come.</p>
+<p><b>Better Tooling</b>. There’s no road ahead for serverless if the existing tooling stops evolving. Luckily, Amazon and other vendors have been improving things like deployment/application bundling and configuration, and we can expect vendors in general to make improvements in other important areas, such as remote debugging and distributed monitoring.</p>
+<p><b>Serverless FaaS Will Fit More Applications</b>. Serverless FaaS doesn’t have a consistent in-server state, so such an architecture will not be able to support high-throughput applications.</p>
+<p>While vendors will surely try to make function instances active between events for a longer time, the hybrid approach — an architecture combining serverless and non-serverless execution models — is likely to be the better option for such applications.</p>
+<p><b>Fewer implementation Issues. </b>From deployment to packaging to integration testing to the opaqueness of monitoring support, there is a very long list of issues when it comes to implementing serverless applications as of today. As vendors are gradually fixing implementation-related issues, we can expect them to deal with all the problems existing in this area today as well.</p>
+<p><b>Emergence of First Solid Serverless Practices</b>. Although a lot is clear about nature serverless computing and how it can benefit teams and applications they design, it is still a very, very young field will little-to-no guidelines for the long-term as well as many blank spaces across the board.</p>
+<p>So, in the next several years, we can expect the serverless rule book to start shaping up. It will outline where serverless fits best and where traditional ways are more favorable, the best ways to implement serverless, how to build a hybrid serverless architecture, and so on. The answers will come from both sides — the vendors, and the community.</p>
+<p>That doesn’t end here, but vendors will surely try to tackle these first. Will serverless become the new normal for application architectures? It has the potential, but, as with many things, only time will tell.</p>
+<h1>Should your business switch to serverless now?</h1>
+<p>In 2017 the serverless market was worth around $3 billion. By 2025, it’s predicted to go up to $20 billion. Many giants are already adopting serverless. To name a few, Netflix, Coca Cola, Airbnb, EA, Vevo, MongoDB, Accenture, etc.</p>
+<p><amp-img class="aligncenter size-full wp-image-18787 amp-wp-enforced-sizes" src="../../wp-content/uploads/analytics.jpg" alt="graph for serverless stats in the usa" width="1170" height="740" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/analytics.jpg 1170w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-300x190.jpg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-1024x648.jpg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-768x486.jpg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-600x379.jpg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-450x285.jpg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-1000x632.jpg 1000w" layout="intrinsic"><noscript><img class="aligncenter size-full wp-image-18787" src="../../wp-content/uploads/analytics.jpg" alt="graph for serverless stats in the usa" width="1170" height="740" srcset="https://www.intellectsoft.net/blog/wp-content/uploads/analytics.jpg 1170w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-300x190.jpg 300w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-1024x648.jpg 1024w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-768x486.jpg 768w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-600x379.jpg 600w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-450x285.jpg 450w, https://www.intellectsoft.net/blog/wp-content/uploads/analytics-1000x632.jpg 1000w" sizes="(max-width: 1170px) 100vw, 1170px"></noscript></amp-img>If you consider switching to serverless, we suggest keeping in mind two things:</p>
+<ul>
+<li class="amp-wp-fe3f5cc">You should not migrate all your apps to serverless right away. Try and test first;</li>
+<li class="amp-wp-fe3f5cc">Serverless is the right direction for the future for two main reasons: it gives the opportunity to deliver value to customers quickly and lets you pay only for the used resources.</li>
+</ul>
+<p>Indeed, there are still numerous pitfalls and execution bottlenecks utilizing serverless. Moreover, security is one of the top issues that should be resolved over time. Yet one thing the entire market knows is that serverless is inevitable, and it will own the market. It’s all just a matter of time.</p>
+<p><b>If you are ready to elevate your business with the serverless paradigm or need an extensive consultation on the matter, </b><a href="../../../contacts.html"><b>get in touch with our experts. </b></a></p>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="../../software-development/index.html" rel="category tag">Development</a>, <a href="../../tech-trends/index.html" rel="category tag">Tech Trends</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="../index.html#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>Intellectsoft Blog</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+
+<!-- This site is optimized with Phil Singleton's WP SEO Structured Data pro plugin v1.3.10 - https://kcseopro.com/wordpress-seo-structured-data-schema-plugin/ -->
+
+<!-- / WP SEO Structured Data pro plugin. -->
+
+
+</body>
+
+<!-- Mirrored from www.intellectsoft.net/blog/serverless-architecture-from-buzzword-to-breakthrough-paradigm/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Apr 2020 21:29:49 GMT -->
+</html>
+<!-- Hummingbird cache file was created in 0.072334051132202 seconds, on 01-04-20 8:54:30 -->
